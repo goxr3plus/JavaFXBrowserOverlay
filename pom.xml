@@ -19,7 +19,7 @@
 	</properties>
 
 	<build>
-		<finalName>JavaFXWebBrowser-${project.version}</finalName>
+		<finalName>JavaFX-Browser-Overlay-${project.version}</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
 			<resource>
@@ -70,8 +70,8 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>main.java.com.goxr3plus.javafxwebbrowser.application.Main</mainClass>
-							<classpathPrefix>JavaFXWebBrowser_lib/</classpathPrefix>
+							<mainClass>main.java.com.goxr3plus.javafxbrowseroverlay.application.Main</mainClass>
+							<classpathPrefix>JavaFXBrowserOverlay_lib/</classpathPrefix>
 						</manifest>
 					</archive>
 				</configuration>
@@ -92,7 +92,7 @@
 						<configuration>
 							<!-- exclude junit, we need runtime dependency only -->
 							<excludeArtifactIds> junit </excludeArtifactIds>
-							<outputDirectory>${project.build.directory}/JavaFXWebBrowser_lib/</outputDirectory>
+							<outputDirectory>${project.build.directory}/JavaFXBrowserOverlay_lib/</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
@@ -131,6 +131,12 @@
 	<!-- Dependencies -->
 
 	<dependencies>
-		
+
+		<dependency>
+			<groupId>com.github.goxr3plus</groupId>
+			<artifactId>JavaFX-Web-Browser</artifactId>
+			<version>V3.2.0</version>
+		</dependency>
+
 	</dependencies>
 </project>
